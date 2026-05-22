@@ -10,7 +10,7 @@ import okhttp3.Response
  */
 object ApiConfig {
     // Default emulator loopback mapping to localhost:8000
-    var baseUrl: String = "http://10.0.2.2:8000/"
+    var baseUrl: String = "http://172.30.154.213:8000/"
         set(value) {
             val trimmed = value.trim()
             val formatted = if (trimmed.endsWith("/")) trimmed else "$trimmed/"
