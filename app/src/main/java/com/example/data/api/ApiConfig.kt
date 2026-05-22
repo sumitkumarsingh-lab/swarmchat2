@@ -9,8 +9,8 @@ import okhttp3.Response
  * Provides on-the-fly Base URL swaps so developers can test against different HTTP servers.
  */
 object ApiConfig {
-    // Default emulator loopback mapping to localhost:8000
-    var baseUrl: String = "http://172.30.154.213:8000/"
+    // Linked directly to our permanent cloud server gateway
+    var baseUrl: String = "https://telco-swarm-backend.onrender.com/"
         set(value) {
             val trimmed = value.trim()
             val formatted = if (trimmed.endsWith("/")) trimmed else "$trimmed/"
