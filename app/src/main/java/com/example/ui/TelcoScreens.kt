@@ -127,7 +127,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
         }
         
         Text(
-            text = "Global Telco Connect",
+            text = "MultiAgent CXM",
             style = MaterialTheme.typography.headlineMedium.copy(
                 fontWeight = FontWeight.ExtraBold,
                 letterSpacing = 0.5.sp,
@@ -142,7 +142,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
             modifier = Modifier.padding(top = 4.dp, bottom = 24.dp)
         ) {
             Text(
-                text = "CONCILIATOR GATEWAY",
+                text = "Resolution,Retention & Registration",
                 fontSize = 10.sp,
                 color = GeoPrimaryPurple,
                 fontWeight = FontWeight.Black,
@@ -150,7 +150,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
             )
             Spacer(modifier = Modifier.width(6.dp))
             Text(
-                text = "• PORT 8000",
+                text = "• DES",
                 fontSize = 10.sp,
                 color = GeoSecondaryText,
                 fontWeight = FontWeight.Bold,
@@ -179,7 +179,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = if (isHealthy) "ENTERPRISE GATEWAY ONLINE" else "GATEWAY UNREACHABLE (TAP TO RETRY)",
+                    text = if (isHealthy) "Welcome to AI driven CXM" else "GATEWAY UNREACHABLE (TAP TO RETRY)",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.ExtraBold,
                     color = if (isHealthy) Color(0xFF234E52) else Color(0xFF742A2A)
@@ -204,7 +204,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
         ) {
             Column(modifier = Modifier.padding(24.dp)) {
                 Text(
-                    text = "Operator Authentication",
+                    text = "Login to Chat",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = GeoOnBackground,
@@ -214,7 +214,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
                 OutlinedTextField(
                     value = searchParam,
                     onValueChange = { viewModel.loginSearchParam.value = it },
-                    label = { Text("Client Identity (Name, Account#, Phone)", color = GeoSecondaryText) },
+                    label = { Text("Enter your name/4 digit ID", color = GeoSecondaryText) },
                     placeholder = { Text("e.g., Sumit Kumar or ACC123", color = Color(0xFF938F99)) },
                     leadingIcon = { Icon(Icons.Default.AccountCircle, "User Icon", tint = GeoPrimaryPurple) },
                     singleLine = true,
@@ -252,7 +252,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
                         CircularProgressIndicator(modifier = Modifier.size(24.dp), color = GeoWhite, strokeWidth = 2.dp)
                     } else {
                         Text(
-                          text = "Start Swarm Session",
+                          text = "Start Swarm",
                           fontWeight = FontWeight.Bold,
                           fontSize = 15.sp,
                           letterSpacing = 0.1.sp
@@ -333,7 +333,7 @@ fun LoginScreen(viewModel: TelcoViewModel) {
                         modifier = Modifier.padding(bottom = 4.dp)
                     )
                     Text(
-                        text = "Customize the endpoint so Android Retrofit can reach local or cloud server instances.",
+                        text = "Customize the endpoint so Android Retrofit can reach Render cloud server instances.",
                         fontSize = 11.sp,
                         color = GeoSecondaryText,
                         modifier = Modifier.padding(bottom = 12.dp)
@@ -361,8 +361,8 @@ fun LoginScreen(viewModel: TelcoViewModel) {
                     ) {
                         TextButton(
                             onClick = {
-                                tempUrl = "http://10.0.2.2:8000/"
-                                viewModel.updateBaseUrl("http://10.0.2.2:8000/")
+                                tempUrl = "https://telco-swarm-backend.onrender.com/"
+                                viewModel.updateBaseUrl("https://telco-swarm-backend.onrender.com/")
                             }
                         ) {
                             Text("Reset Localhost", color = GeoPrimaryPurple, fontWeight = FontWeight.Bold)
