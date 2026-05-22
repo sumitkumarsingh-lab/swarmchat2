@@ -12,19 +12,19 @@ jobs:
     - name: Checkout Source Code
       uses: actions/checkout@v4
 
-    - name: Set up Java JDK 17
+    # Upgraded to JDK 21 to match modern Android Studio builds
+    - name: Set up Java JDK 21
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '21'
         distribution: 'zulu'
 
-    # This forces GitHub to install Gradle 8.5 directly in the cloud
+    # Upgraded Gradle to 8.12 to support plugin 9.1.1
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
       with:
-        gradle-version: '8.5'
+        gradle-version: '8.12'
 
-    # This creates the missing wrapper files on the cloud runner
     - name: Generate Wrapper Files
       run: gradle wrapper
 
