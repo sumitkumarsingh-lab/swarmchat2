@@ -1,0 +1,46 @@
+# --- Android Enterprise GitIgnore ---
+
+# Gradle files and cache
+.gradle/
+/build/
+/app/build/
+build/
+app/build/
+
+# Kotlin / KSP compilers
+.kotlin/
+.ksp/
+
+# Android Studio & IntelliJ files
+*.iml
+.idea/
+/.idea/
+*.ipr
+*.iws
+/out/
+/captures/
+/captures
+
+# NDK & C++ build outputs
+.externalNativeBuild/
+.cxx/
+ndkBuild/
+
+# Local property keys / secrets
+local.properties
+.env
+.env*.local
+.env.local
+
+# Signing certificates & Keystore profiles (Security Compliance)
+*.jks
+*.p12
+*.pepk
+*.keystore
+!debug.keystore
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*~

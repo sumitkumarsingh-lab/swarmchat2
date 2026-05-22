@@ -1,0 +1,6 @@
+{
+  "name": "Global Telco Connect",
+  "description": "Premium multi-agent enterprise telco interface for registration and interactive chat with real-time support analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
